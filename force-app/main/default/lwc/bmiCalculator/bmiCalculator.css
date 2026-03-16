@@ -9,6 +9,7 @@
   --size-16: 16px;
   --size-20: 20px;
   --size-26: 26px;
+  --size-30: 30px;
   --size-36: 36px;
 }
 .app {
@@ -64,5 +65,10 @@ input {
   font-size: var(--size-16);
   padding: 12px;
   border-color: var(--light-pink);
-  color: var(--light-white)
+  color: var(--light-white);
+}
+
+.result-value {
+  font-size: var(--size-30);
+  color: var(--light-blue);
 }

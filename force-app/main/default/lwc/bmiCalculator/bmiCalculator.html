@@ -1,7 +1,18 @@
 <template>
-  <div class="app">
+  <div class="app slds-var-p-around_medium">
     <div class="box">
       <h1>BMI Calculator</h1>
+
+      <template if:true={result}>
+      <section>
+        <h2>Your BMI Value is:</h2>
+        <div class="result-value">{bmiValue}</div>
+        <h2>Your category is:</h2>
+        <div class="result-value">{result}</div>
+        <button class="slds-button slds-button_neutral slds-button_stretch custom-button slds-var-m-bottom_large slds-var-m-top_large" onclick={recalculate}>Recalculate</button>
+      </section>
+      </template>
+      <template if:false={result}>
       <form onsubmit={submitHandler}>
         <div class="slds-form-element slds-var-m-bottom_medium">
           <label class="slds-form-element__label slds-text-title_bold" for="text-input-height">Height (cm)</label>
@@ -16,8 +27,9 @@
           </div>
         </div>
         <button class="slds-button slds-button_neutral slds-button_stretch custom-button slds-var-m-bottom_large">Calculate</button>
-      </form>
-
+      </form> 
+      </template>
+      
       <div class="info-wrapper">
         <h2>What your BMI means</h2>
         <p class="slds-var-m-bottom_medium">Your BMI is a measure of your body fat based on your height and weight.</p>
