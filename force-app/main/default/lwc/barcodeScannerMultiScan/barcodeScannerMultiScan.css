@@ -2,7 +2,7 @@
   --dark-blue: #002D72;
   --light-white: #fafafa;
   --light-blue: #0059E4;
-  --light-yellow: #FFE500;
+  --yellow: #FFE500;
   --size-12: 12px;
   --size-14: 14px;
   --size-16: 16px;
@@ -14,28 +14,49 @@
 
 .app {
   min-height: 100vh;
-  background-image: url(/sfsites/c/resource/MetroBackg);
+  background-image: url(/sfsites/c/resource/MarketBackground);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .box {
   max-width: 420px;
+  min-height: 100vh;
   text-align: center;
   margin: auto;
   background: var(--dark-blue);
- 
-  padding: 20px;
-  border-radius: var(--size-14);
-}s
+  padding: 10px;
+}
+
+.mtrlogo {
+    padding: 20px 0 20px 0;
+}
+
+.headmktbtnsvg {
+    padding: 10px 0 10px 0;
+    background-color: var(--light-blue);
+    border-radius: var(--size-14);
+}
+
+.scanhead {
+    font-size: var(--size-16);
+    font-weight: bold;
+    color: var(--yellow);
+}
 
 h1 {
   font-size: var(--size-36);
-  color: var(--light-yellow);
-  padding: 30px;
+  color: var(--yellow);
+  padding: 10px 0 10px 0;
   font-weight: bold;
 }
 
-.scandesk {
+.scanbtn {
+ padding: 20px 0 15px 0;
+}
 
+.scandesc {
+    font-size: var(--size-14);
+    font-weight: bold;
+    color: var(--yellow);
 }
