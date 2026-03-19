@@ -1,0 +1,39 @@
+<!-- barcodeScannerMultiScan.html -->
+<template>
+  <div class="app">
+    <div class="box">
+      <div class="scanhead">
+          <h1>Card Scanner</h1>
+      </div>
+
+      <!-- After a barcode is successfully scanned, 
+          its value is displayed here: -->
+      <template lwc:if={scannedBarcode}>
+          <div class="scanresult">
+              Scanned barcode value is:
+              <span class="slds-text-heading_small">{scannedBarcode}</span>
+          </div>
+      </template>
+
+      <!-- Static help text -->
+      <div class="scandesc">
+          Click <strong>Scan Card</strong> to open a card scanner camera view. Position a
+          card in the scanner view to scan it.
+      </div>
+
+      <!-- The click-to-scan button;
+          Disabled if BarcodeScanner isn't available -->
+      <div class="btnarea">
+          <lightning-button
+              variant="brand"
+              class="slds-var-m-left_x-small"
+              disabled={scanButtonDisabled}
+              icon-name="utility:scan"
+              label="Scan Card"
+              title="Open a camera view and look for a barcode to scan"
+              onclick={handleBeginScanClick}>
+          </lightning-button>
+      </div>  
+    </div>
+  </div>
+</template>

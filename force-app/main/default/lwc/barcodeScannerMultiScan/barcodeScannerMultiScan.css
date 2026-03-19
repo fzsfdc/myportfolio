@@ -1,0 +1,41 @@
+:host() {
+  --dark-blue: #002D72;
+  --light-white: #fafafa;
+  --light-blue: #0059E4;
+  --light-yellow: #FFE500;
+  --size-12: 12px;
+  --size-14: 14px;
+  --size-16: 16px;
+  --size-20: 20px;
+  --size-26: 26px;
+  --size-30: 30px;
+  --size-36: 36px;
+}
+
+.app {
+  min-height: 100vh;
+  background-image: url(/sfsites/c/resource/MetroBackg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box {
+  max-width: 420px;
+  text-align: center;
+  margin: auto;
+  background: var(--dark-blue);
+ 
+  padding: 20px;
+  border-radius: var(--size-14);
+}s
+
+h1 {
+  font-size: var(--size-36);
+  color: var(--light-yellow);
+  padding: 30px;
+  font-weight: bold;
+}
+
+.scandesk {
+
+}
