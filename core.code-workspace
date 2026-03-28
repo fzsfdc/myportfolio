@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "/Users/fzuchowski/dev/sfdc/udemy/Bld7RlTmSfdcPrjsBnsPrj/myportfolio"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "/Users/fzuchowski/dev/sfdc/udemy/Bld7RlTmSfdcPrjsBnsPrj/myportfolio"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "/Users/fzuchowski/dev/sfdc/udemy/Bld7RlTmSfdcPrjsBnsPrj/myportfolio/.eslintrc.json"
+    }
+  }
+}
