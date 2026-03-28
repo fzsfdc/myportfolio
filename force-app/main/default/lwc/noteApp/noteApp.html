@@ -1,8 +1,12 @@
 <template>
     <div class="app">
-        <div class="box box-center">
-        </div>div>
-            
+        <div class="box box-center" onclick={createNoteHandler}>
+            <div class="dotted-circle">
+                <lightning-icon icon-name='utility:add' class="custom-icon" alternative-text='add' size='large' title='add'></lightning-icon>
+            </div>
+            <h2>Add New Note...</h2>
+        </div>
+
         <div class="box slds-var-m-bottom_medium">
             <header>
                 <h2 class="slds-truncate">Note Heading</h2>
@@ -10,19 +14,35 @@
             <div class="notes">
                 Description text will come here
             </div>
+     
+            <footer class="footer">
+                <div class="datefld">Tue Jan 20 2023</div>
+                <div>
+                    <lightning-icon icon-name='action:edit' class="edit-icon slds-var-m-right_x-small" alternative-text='edit' size='xx-small' title='edit note'></lightning-icon>
+                    <lightning-icon icon-name='action:delete' class="delete-icon" alternative-text='delete' size='xx-small' title='delete note'></lightning-icon>
+                </div>
+            </footer>    
         </div>
-        
-        <footer>
-            <div>
-
-            </div>
-        </footer>
-
-        <!--
-        <div class="dotted-circle">
-                <lightning-icon icon-name='utility:add' class="custom-icon" alternative-text='add' size='large' title='add'></lightning-icon>
-            </div>
-            <h2>Add New Note...</h2>
-        </div -->
     </div>
+
+    <template if:true={showModal}>
+        <c-modal-note>
+            <h1 slot="header" class="slds-modal__title">Add Note</h1>
+            <form>
+                <lightning-input type="text" label="Title" name="Name" value={noteRecord.Name} onclick={changeHandler}></lightning-input>
+                <lightning-input-rich-text 
+                    name={Note_Description__c}
+                    value={noteRecord.Note_Description__c}
+                    onclick={formSubmitHandler} 
+                    formats={formats} 
+                    label="Description" 
+                    label-visible="true">
+                </lightning-input-rich-text>
+            </form>
+            <footer slot="footer">
+                <button class="slds-button slds-button_neutral" onclick={closeModalHandler}>Cancel</button>
+                <button class="slds-button slds-button_brand">Save</button>
+            </footer>
+        </c-modal-note>
+    </template>
 </template>
